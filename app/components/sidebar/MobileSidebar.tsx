@@ -45,19 +45,23 @@ export function MobileSidebar() {
                           }
                   flex items-center w-full hover:bg-accent dark:hover:bg-accent rounded-lg px-4 py-2`}
                         >
-                          <span>
-                            <item.icon
-                              size={16}
-                              className="h-4 w-4 group-hover:cursor-pointer mr-2 text-primary"
-                            />
-                          </span>
-                          <p
-                            className={`${pathname === item.href ? "" : ""}
+                          <SheetClose asChild>
+                            <div className=" w-full flex items-center">
+                              <span>
+                                <item.icon
+                                  size={16}
+                                  className="h-4 w-4 group-hover:cursor-pointer mr-2 text-primary"
+                                />
+                              </span>
+                              <p
+                                className={`${pathname === item.href ? "" : ""}
                      text-sm hover:cursor-pointer text-foreground
                   `}
-                          >
-                            {item.name}
-                          </p>
+                              >
+                                {item.name}
+                              </p>
+                            </div>
+                          </SheetClose>
                         </Link>
                       </div>
                     </div>
@@ -83,19 +87,23 @@ export function MobileSidebar() {
                           }
                   flex items-center hover:cursor-pointer w-full hover:bg-accent dark:hover:bg-accent rounded-lg px-4 py-2 `}
                         >
-                          <span>
-                            <item.icon
-                              size={16}
-                              className="h-4 w-4 group-hover:cursor-pointer mr-2 text-primary"
-                            />
-                          </span>
-                          <p
-                            className={`${pathname === item.href ? "" : ""}
+                          <SheetClose asChild>
+                            <div className=" w-full flex items-center">
+                              <span>
+                                <item.icon
+                                  size={16}
+                                  className="h-4 w-4 group-hover:cursor-pointer mr-2 text-primary"
+                                />
+                              </span>
+                              <p
+                                className={`${pathname === item.href ? "" : ""}
                      text-sm hover:cursor-pointer text-foreground
                   `}
-                          >
-                            {item.name}
-                          </p>
+                              >
+                                {item.name}
+                              </p>
+                            </div>
+                          </SheetClose>
                         </Link>
                       </div>
                     </div>
