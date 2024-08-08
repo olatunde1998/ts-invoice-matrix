@@ -11,7 +11,7 @@ export default function SideBar() {
 
   return (
     <>
-      <section className="md:absolute xl:fixed md:w-[249px]">
+      <section className="-z-30 absolute md:z-30 xl:fixed w-[249px]">
         <div className="md:border-r border-slate min-h-screen pt-10 flex flex-col justify-between md:fixed">
           <div>
             <div className="justify-between px-3 pr-4 pb-6 hidden md:flex items-center">
