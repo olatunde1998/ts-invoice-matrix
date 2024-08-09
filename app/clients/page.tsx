@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import HeaderCrumb from "@/app/components/header-crumb/HeaderCrumb";
-import Trash from "@/app/components/trash/Trash";
+import TrashPage from "@/app/components/trash/TrashPage";
 
 export const metadata: Metadata = {
   title: "Clients | geodevcodes",
@@ -20,13 +20,15 @@ export default function Clients() {
       <section className="h-fit mt-8 p-6">
         <div className="lg:mt-20">
           {/* ====EMPTY TRASH GOES HERE === */}
-          <Trash
+          <TrashPage
             headingText="Start Adding Clients"
             subHeadingText={
               <span>
                 No clients have been added yet. Click the{" "}
-                <span className="text-primary mx-1">&apos;Add Client&apos;</span> button
-                above to create a new client.
+                <span className="text-primary mx-1">
+                  &apos;Add Client&apos;
+                </span>{" "}
+                button above to create a new client.
               </span>
             }
           />
