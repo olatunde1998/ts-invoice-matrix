@@ -1,13 +1,17 @@
+import { DeleteInvoiceRequest } from "@/app/services/invoice.request";
 import { useQueryClient } from "@tanstack/react-query";
 import { CircleAlert } from "lucide-react";
+import { toast } from "react-toastify";
 import { useState } from "react";
 
 interface DeleteInvoiceProps {
   setShowDeleteInvoice?: any;
+  deleteInvoiceID?: any;
 }
 
 export default function DeleteInvoice({
   setShowDeleteInvoice,
+  deleteInvoiceID,
 }: DeleteInvoiceProps) {
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
 
@@ -17,14 +21,15 @@ export default function DeleteInvoice({
   // Delete Users Logic
   const handleDelete = async () => {
     setIsDeleting(true);
-
     try {
-      //   const response = await DeleteInvoiceRequest();
-      // toast.success("User Deleted Successfully");
-      console.log("deleted successfully");
+      await DeleteInvoiceRequest(deleteInvoiceID);
+      toast.success("Invoice Deleted Successfully");
       setShowDeleteInvoice(false);
-    } catch (error) {
-      console.log(error);
+      queryClient.invalidateQueries({ queryKey: ["getInvoicesApi"] });
+    } catch (error: any) {
+      console.log(error?.response?.data?.message);
+      toast.error(error?.response?.data?.message);
+      toast.error(error?.response?.message);
     } finally {
       setIsDeleting(false);
     }
