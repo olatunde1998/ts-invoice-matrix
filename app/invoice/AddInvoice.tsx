@@ -63,6 +63,7 @@ export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
       await CreateInvoiceRequest(body);
       queryClient.invalidateQueries({ queryKey: ["getInvoicesApi"] });
       toast.success("Invoice Created Successfully");
+      reset();
     } catch (error: any) {
       console.log(error?.response?.data?.message);
       toast.error(error?.response?.data?.message);
