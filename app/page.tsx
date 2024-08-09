@@ -19,7 +19,7 @@ export default function Home() {
             subHeadingText={
               <span>
                 No clients have been added yet. Click the{" "}
-                <span className="text-primary mx-1">'View More'</span> button
+                <span className="text-primary mx-1">&apos;View More&apos;</span> button
                 above to view more.
               </span>
             }

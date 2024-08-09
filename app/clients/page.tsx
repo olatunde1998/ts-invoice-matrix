@@ -25,7 +25,7 @@ export default function Clients() {
             subHeadingText={
               <span>
                 No clients have been added yet. Click the{" "}
-                <span className="text-primary mx-1">'Add Client'</span> button
+                <span className="text-primary mx-1">&apos;Add Client&apos;</span> button
                 above to create a new client.
               </span>
             }
