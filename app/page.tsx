@@ -1,5 +1,5 @@
 import HeaderCrumb from "@/app/components/header-crumb/HeaderCrumb";
-import Trash from "@/app/components/trash/Trash";
+import TrashPage from "@/app/components/trash/TrashPage";
 
 export default function Home() {
   return (
@@ -14,13 +14,13 @@ export default function Home() {
       <section className="h-fit mt-8 p-6">
         <div className="lg:mt-20">
           {/* ====EMPTY TRASH GOES HERE === */}
-          <Trash
+          <TrashPage
             headingText="Start Adding Users"
             subHeadingText={
               <span>
                 No clients have been added yet. Click the{" "}
-                <span className="text-primary mx-1">&apos;View More&apos;</span> button
-                above to view more.
+                <span className="text-primary mx-1">&apos;View More&apos;</span>{" "}
+                button above to view more.
               </span>
             }
           />
