@@ -72,7 +72,7 @@ export const EditInvoiceRequest = async (editInvoiceID: any, body: any) => {
 // DELETE INVOICE  REQUEST
 export const DeleteInvoiceRequest = async (deleteInvoiceID: any) => {
   const response = await axios.delete(
-    `${process.env.NEXT_PUBLIC_BASEURL}/api/courses/${deleteInvoiceID}`,
+    `${process.env.NEXT_PUBLIC_BASEURL}/api/invoices/${deleteInvoiceID}`,
     {
       maxBodyLength: Infinity,
       headers: {
