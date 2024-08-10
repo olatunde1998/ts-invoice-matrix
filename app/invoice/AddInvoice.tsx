@@ -7,6 +7,10 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button } from "@/components/ui/button";
 import { toast } from "react-toastify";
+import { Upload } from "lucide-react";
+import Image from "next/image";
+import { statusData } from "@/utils/invoiceData";
+import { Select } from "@/app/components/inputs/Select";
 
 interface AddInvoiceProps {
   setShowAddInvoice?: any;
@@ -29,14 +33,13 @@ const schema = yup.object().shape({
     .string()
     .required("Amount is required")
     .min(3, "Amount must be greater than 3 letters"),
-  status: yup
-    .string()
-    .required("Status is required")
-    .min(3, "Status must be greater than 3 letters"),
 });
 
 export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
   const [isSaving, setIsSaving] = useState(false);
+  const [invoiceFile, setInvoiceFile] = useState<string>();
+  const [selectedInvoiceFile, setSelectedInvoiceFile] = useState(null);
+  const [getStatusName, setGetStatusName] = useState();
 
   // refetch invoices tanStack query logic
   const queryClient = useQueryClient();
@@ -49,6 +52,24 @@ export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
+  // Uploading Invoice File logic
+  const handleInvoiceFileChange = ({ target: { files } }: any) => {
+    const file = files[0];
+    console.log(files[0]?.type, "this is the file type");
+
+    if (file) {
+      const fileType = files[0].type;
+      if (
+        fileType === "image/jpg" ||
+        fileType === "image/png" ||
+        fileType === "image/jpeg"
+      ) {
+        setInvoiceFile(URL.createObjectURL(files[0]));
+        setSelectedInvoiceFile(file);
+      }
+    }
+  };
+
   //Create  Invoice submission Logic
   const onSubmitHandler = async (data: any) => {
     setIsSaving(true);
@@ -57,12 +78,13 @@ export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
       lastName: data?.lastName,
       email: data?.email,
       amount: data?.amount,
-      status: data?.status,
+      status: getStatusName,
     };
     try {
       await CreateInvoiceRequest(body);
       queryClient.invalidateQueries({ queryKey: ["getInvoicesApi"] });
       toast.success("Invoice Created Successfully");
+      setShowAddInvoice(false);
       reset();
     } catch (error: any) {
       console.log(error?.response?.data?.message);
@@ -155,21 +177,55 @@ export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
               </div>
             </div>
 
-            {/* === Status === */}
-            <div>
-              <div
-                className={`${
-                  errors.status ? "border-[1.3px] border-red-500" : ""
-                } flex flex-col w-full pt-2 px-4 pb-1 border-[1.3px] border-[#6C748B] rounded-lg`}
-              >
-                <input
-                  className="py-2 focus:outline-none cursor-text custom-placeholder bg-transparent text-accent"
-                  type="text"
-                  placeholder="Status"
-                  {...register("status")}
-                  maxLength={24}
-                />
+            {/* === Invoice File Image ==== */}
+            <div className="mt-4">
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-[#575D72]">Invoice File</p>
               </div>
+              <div className="flex items-center justify-center space-x-2 md:space-x-6 bg-white rounded-md  border-[0.6px] border-slate-300 mt-2 cursor-pointer ">
+                <label
+                  htmlFor="fileInput"
+                  className="w-full p-3 flex  justify-between tracking-wide cursor-pointer text-[#575D72] h-[150px]"
+                >
+                  <div className="flex w-full items-center justify-between gap-2">
+                    <p className="w-full flex justify-center">
+                      <Upload className="mr-3" />
+                      Upload file
+                    </p>
+                    <input
+                      type="file"
+                      name="user_Image"
+                      id="fileInput"
+                      accept=".png,  .jpg, .jpeg"
+                      className="hidden input-field"
+                      onChange={handleInvoiceFileChange}
+                    />
+
+                    {invoiceFile && (
+                      <div className="border-2 border-slate-800 rounded-full relative mx-auto w-[45px]">
+                        <Image
+                          src={invoiceFile}
+                          alt="user avatar"
+                          width={100}
+                          height={100}
+                          className="rounded-full w-[45px] h-[35px]"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            {/* === Status DropDown Input === */}
+            <div>
+              <Select
+                placeholder="Status *"
+                onSelect={(item: any) => {
+                  setGetStatusName(item?.name);
+                }}
+                inputData={statusData}
+              />
             </div>
           </section>
 
