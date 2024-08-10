@@ -1,4 +1,5 @@
 "use client";
+import { IoFilterSharp } from "react-icons/io5";
 import { Trash } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { GetInvoicesRequest } from "@/app/services/invoice.request";
@@ -37,6 +38,7 @@ export default function InvoiceHome() {
   const [showEditInvoice, setShowEditInvoice] = useState(false);
   const [showDeleteInvoice, setShowDeleteInvoice] = useState(false);
   const [selectedRow, setSelectedRow] = useState<InvoiceData | null>(null);
+  const [searchInvoice, setSearchInvoice] = useState<string>("");
 
   const { data: invoiceData, isLoading } = useQuery({
     queryKey: ["getInvoicesApi"],
@@ -133,6 +135,19 @@ export default function InvoiceHome() {
     }),
   ];
 
+  // Search Filter Functionality logic
+  const filteredInvoicesData = invoiceData?.filter((item: any) => {
+    const searchQuery = searchInvoice?.toLowerCase();
+    return (
+      item.firstName?.toLowerCase().includes(searchQuery) ||
+      item.lastName?.toLowerCase().includes(searchQuery) ||
+      item.status?.toLowerCase().includes(searchQuery) ||
+      item.createdAt?.toLowerCase().includes(searchQuery) ||
+      item.amount?.toLowerCase().includes(searchQuery) ||
+      item.email?.toLowerCase().includes(searchQuery)
+    );
+  });
+
   return (
     <>
       <div>
@@ -143,6 +158,7 @@ export default function InvoiceHome() {
           handleButtonClick={setShowAddInvoice}
         />
       </div>
+
       <section className="h-fit mt-8 ">
         {isLoading ? (
           <>
@@ -172,8 +188,22 @@ export default function InvoiceHome() {
         ) : (
           <div>
             {/* ====INVOICE TABLE GOES HERE === */}
+            <div className="flex items-center gap-3">
+              <input
+                className="text-gray-600 dark:text-accent-foreground outline-none border border-accent p-3 rounded-lg w-full md:w-1/3 mb-4"
+                placeholder="Search Invoice by Status, Date"
+                value={searchInvoice}
+                onChange={(e) => setSearchInvoice(e.target.value)}
+              />
+              <div className="flex items-center">
+                <IoFilterSharp className="w-6 h-6 mr-2 " />
+                <p className="font-inter text-base hidden md:block">Filter</p>
+              </div>
+            </div>
+            {/* ====INVOICE TABLE GOES HERE === */}
             <Table
-              data={invoiceData ? invoiceData : []}
+              // data={invoiceData ? invoiceData : []}
+              data={filteredInvoicesData ? filteredInvoicesData : []}
               columns={columns}
               tableClass=" font-medium text-small"
             />
@@ -189,6 +219,7 @@ export default function InvoiceHome() {
         <EditInvoice
           setShowEditInvoice={setShowEditInvoice}
           editInvoiceID={selectedRow ? selectedRow._id : null}
+          invoiceData={invoiceData}
         />
       </Sheet>
 
