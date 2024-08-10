@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { toast } from "react-toastify";
-import {
-  EditInvoiceRequest,
-  GetInvoiceByIdRequest,
-} from "@/app/services/invoice.request";
+import { EditInvoiceRequest } from "@/app/services/invoice.request";
+import { statusData } from "@/utils/invoiceData";
+import { Select } from "@/app/components/inputs/Select";
 
 interface EditInvoiceProps {
   setShowEditInvoice?: any;
   editInvoiceID?: any;
+  invoiceData?: any;
 }
 
 const schema = yup.object().shape({
@@ -42,15 +42,17 @@ const schema = yup.object().shape({
 export default function EditInvoice({
   setShowEditInvoice,
   editInvoiceID,
+  invoiceData,
 }: EditInvoiceProps) {
   const [isSaving, setIsSaving] = useState(false);
+  const [getStatusName, setGetStatusName] = useState();
 
-  const { data: invoiceData, isLoading } = useQuery({
-    queryKey: ["getInvoicesByIdApi"],
-    queryFn: () => GetInvoiceByIdRequest(editInvoiceID),
-  });
+  const invoicesArray = invoiceData || [];
+  const invoice = invoicesArray?.find(
+    (invoice: any) => invoice?._id === editInvoiceID
+  );
 
-  console.log(invoiceData, "this is single invoice ====");
+  console.log(invoice, "this is single invoice ====");
 
   // refetch invoices tanStack query logic
   const queryClient = useQueryClient();
@@ -63,11 +65,11 @@ export default function EditInvoice({
   } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
-      firstName: invoiceData?.firstName,
-      lastName: invoiceData?.lastName,
-      amount: invoiceData?.amount,
-      email: invoiceData?.email,
-      status: invoiceData?.status,
+      firstName: invoice?.firstName,
+      lastName: invoice?.lastName,
+      amount: invoice?.amount,
+      email: invoice?.email,
+      status: invoice?.status,
     },
   });
 
@@ -79,7 +81,7 @@ export default function EditInvoice({
       lastName: data?.lastName,
       email: data?.email,
       amount: data?.amount,
-      status: data?.status,
+      status: getStatusName ? getStatusName : data?.status,
     };
 
     try {
@@ -179,24 +181,20 @@ export default function EditInvoice({
               </div>
 
               {/* === Status === */}
+
               <div>
-                <div
-                  className={`${
-                    errors.status ? "border-[1.3px] border-red-500" : ""
-                  } flex flex-col w-full pt-2 px-4 pb-1 border-[1.3px] border-[#6C748B] rounded-lg`}
-                >
-                  <input
-                    className="py-2 focus:outline-none cursor-text custom-placeholder bg-transparent text-accent"
-                    type="text"
-                    placeholder="Status"
-                    {...register("status")}
-                    maxLength={24}
-                  />
-                </div>
+                <Select
+                  placeholder="Status *"
+                  onSelect={(item: any) => {
+                    setGetStatusName(item?.name);
+                  }}
+                  inputData={statusData}
+                  getSelectedSector={invoice?.status}
+                />
               </div>
             </section>
 
-            {/* === Submit Button === */}
+            {/* === Status DropDown Input === */}
             <Button
               type="submit"
               disabled={isSaving}
