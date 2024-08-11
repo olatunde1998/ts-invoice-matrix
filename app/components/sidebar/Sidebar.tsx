@@ -6,7 +6,18 @@ import { ModeToggle } from "../modeToggle/ModeToggle";
 import Image from "next/image";
 import { LogOut, X } from "lucide-react";
 
-export default function SideBar() {
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+
+import SignUp from "../sign-up/SignUp";
+
+export default function SideBar({ session }: any) {
   const pathname = usePathname();
 
   return (
@@ -107,12 +118,44 @@ export default function SideBar() {
             </div>
           </div>
 
-          {/* ============SignOut Button ========== */}
+          {/* ============Login and SignOut Button ========== */}
           <section className="border-t border-slate pt-6 px-4 mt-28 hidden md:block pb-6">
-            <div className="bg-accent dark:bg-accent rounded-lg text-foreground flex items-center justify-center gap-4 p-2  cursor-pointer">
-              <LogOut size={16} />
-              <p>Sign out</p>
-            </div>
+            {session?.user?.email ? (
+              <div
+                className="bg-accent dark:bg-accent rounded-lg text-foreground flex items-center justify-center gap-4 p-2  cursor-pointer"
+                // onClick={async () => {
+                //   await signOut();
+                //   redirect("/");
+                // }}
+              >
+                <LogOut size={16} />
+                <p>Sign out</p>
+              </div>
+            ) : (
+              <div className="bg-primary rounded-lg text-foreground flex items-center justify-center gap-4 p-2  cursor-pointer">
+                <AlertDialog>
+                  <AlertDialogTrigger className="flex items-center text-white text-sm">
+                    <LogOut className="mr-2" size={16} /> Sign Up
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogTitle className="flex justify-between">
+                      Sign Up
+                      <AlertDialogCancel>
+                        <X />
+                      </AlertDialogCancel>
+                    </AlertDialogTitle>
+                    <AlertDialogDescription>
+                      Please Login to access the full Platform
+                    </AlertDialogDescription>
+                    <SignUp />
+                    <AlertDialogDescription>
+                      By creating an account, you agree to our Terms of Service
+                      and Privacy Policy.
+                    </AlertDialogDescription>
+                  </AlertDialogContent>
+                </AlertDialog>
+              </div>
+            )}
           </section>
         </div>
       </section>
