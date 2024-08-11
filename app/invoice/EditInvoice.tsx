@@ -16,6 +16,7 @@ interface EditInvoiceProps {
   invoiceData?: any;
 }
 
+// Validation Schema
 const schema = yup.object().shape({
   firstName: yup
     .string()

@@ -15,7 +15,7 @@ interface AddClientProps {
   setShowAddClient?: any;
 }
 
-// Validation Schema 
+// Validation Schema
 const schema = yup.object().shape({
   firstName: yup
     .string()
@@ -176,18 +176,18 @@ export default function AddClient({ setShowAddClient }: AddClientProps) {
                   maxLength={40}
                 />
                 {showPassword ? (
-                    <BiHide
-                      className="absolute right-2 bottom-3 cursor-pointer text-[#8A91A6]"
-                      size={24}
-                      onClick={() => setShowPassword((prev) => !prev)}
-                    />
-                  ) : (
-                    <BiShow
-                      className="absolute right-2 bottom-3 cursor-pointer text-[#8A91A6]"
-                      size={24}
-                      onClick={() => setShowPassword((prev) => !prev)}
-                    />
-                  )}
+                  <BiHide
+                    className="absolute right-2 bottom-3 cursor-pointer text-[#8A91A6]"
+                    size={24}
+                    onClick={() => setShowPassword((prev) => !prev)}
+                  />
+                ) : (
+                  <BiShow
+                    className="absolute right-2 bottom-3 cursor-pointer text-[#8A91A6]"
+                    size={24}
+                    onClick={() => setShowPassword((prev) => !prev)}
+                  />
+                )}
               </div>
             </div>
 

@@ -16,6 +16,7 @@ interface AddInvoiceProps {
   setShowAddInvoice?: any;
 }
 
+// Validation Schema
 const schema = yup.object().shape({
   firstName: yup
     .string()
