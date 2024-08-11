@@ -91,7 +91,7 @@ export const Select = ({
           {inputData?.map((item: any, index: number) => (
             <li
               key={index}
-              className={`p-4 text-accent text-sm hover:hover:bg-gray-200 cursor-pointer hover:text-accent
+              className={`p-4 text-black hover:text-black dark:text-accent text-sm hover:hover:bg-gray-200 cursor-pointer hover:text-accent
               ${item?.name?.toLowerCase() === selected?.toLowerCase() && ""}
               ${
                 item?.name?.toLowerCase().startsWith(inputValue)
