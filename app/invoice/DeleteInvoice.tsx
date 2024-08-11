@@ -15,7 +15,7 @@ export default function DeleteInvoice({
 }: DeleteInvoiceProps) {
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
 
-  // refetch survey using Query client
+  // refetch invoices using Query client
   const queryClient = useQueryClient();
 
   // Delete Users Logic
