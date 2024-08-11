@@ -15,10 +15,10 @@ export default function Home() {
         <div className="lg:mt-20">
           {/* ====EMPTY TRASH GOES HERE === */}
           <TrashPage
-            headingText="Start Adding Users"
+            headingText="No Existing Statistic"
             subHeadingText={
               <span>
-                No clients have been added yet. Click the{" "}
+                No data yet. Click the{" "}
                 <span className="text-primary mx-1">&apos;View More&apos;</span>{" "}
                 button above to view more.
               </span>
