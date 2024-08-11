@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Trash } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { GetClientsRequest } from "@/app/services/clients.request";
 import HeaderCrumb from "@/app/components/header-crumb/HeaderCrumb";
