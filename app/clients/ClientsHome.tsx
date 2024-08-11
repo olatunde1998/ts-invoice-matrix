@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import { IoFilterSharp } from "react-icons/io5";
-import { Trash } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { GetClientsRequest } from "@/app/services/clients.request";
 import HeaderCrumb from "@/app/components/header-crumb/HeaderCrumb";
@@ -11,12 +9,9 @@ import { createColumnHelper } from "@tanstack/react-table";
 import { Table } from "@/app/components/tables/Table";
 import { Sheet } from "@/app/components/sheets/Sheet";
 import { Modal } from "@/app/components/modals/Modal";
-import { AiOutlineEdit } from "react-icons/ai";
 import { formatDate } from "@/utils/utils";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AddInvoice from "../invoice/AddInvoice";
-import DeleteInvoice from "../invoice/DeleteInvoice";
 import DeleteClient from "./DeleteClient";
 import AddClient from "./AddClient";
 
@@ -139,14 +134,14 @@ export default function ClientsHome() {
             {/* ====EMPTY TRASH GOES HERE === */}
             <div className="lg:mt-20">
               <TrashPage
-                headingText="Start Adding Clients"
+                headingText="No Existing Clients"
                 subHeadingText={
                   <span>
                     No clients have been added yet. Click the{" "}
                     <span className="text-primary mx-1">
-                      &apos;Add Client&apos;
+                      &apos;Sign Up&apos;
                     </span>{" "}
-                    button above to create a new client.
+                    button below to create account.
                   </span>
                 }
               />
@@ -170,10 +165,7 @@ export default function ClientsHome() {
       </Sheet>
 
       {/* ===Delete Modal */}
-      <Modal
-        show={showDeleteClient}
-        onClose={() => setShowDeleteClient(false)}
-      >
+      <Modal show={showDeleteClient} onClose={() => setShowDeleteClient(false)}>
         <DeleteClient
           setShowDeleteClient={setShowDeleteClient}
           deleteClientID={selectedRow ? selectedRow._id : null}
