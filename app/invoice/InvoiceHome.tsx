@@ -51,8 +51,8 @@ export default function InvoiceHome() {
   // Table columns
   const columns = [
     columnHelper.accessor("_id", {
-      cell: (info) => <span>{info.row.index + 1}</span>,
-      header: () => <span>S/N </span>,
+      cell: (info) => <span>INV0{info.row.index + 1}</span>,
+      header: () => <span>Invoice ID</span>,
     }),
     columnHelper.accessor("fullName", {
       cell: (info) => (
@@ -71,7 +71,7 @@ export default function InvoiceHome() {
       header: () => <span>Account Created Date</span>,
     }),
     columnHelper.accessor("amount", {
-      cell: (info) => <span>{info?.row?.original?.amount}</span>,
+      cell: (info) => <span>₦{info?.row?.original?.amount}</span>,
       header: () => <span>Amount</span>,
     }),
 
