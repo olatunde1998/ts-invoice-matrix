@@ -118,7 +118,7 @@ export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
                 } flex flex-col w-full pt-2 px-4 pb-1 border-[1.3px] border-[#6C748B] rounded-lg`}
               >
                 <input
-                  className="py-2 focus:outline-none cursor-text bg-transparent text-accent"
+                  className="py-2 focus:outline-none cursor-text bg-transparent text-black"
                   type="text"
                   placeholder="First Name *"
                   {...register("firstName")}
@@ -135,7 +135,7 @@ export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
                 } flex flex-col w-full pt-2 px-4 pb-1 border-[1.3px] border-[#6C748B] rounded-lg`}
               >
                 <input
-                  className="py-2 focus:outline-none cursor-text custom-placeholder bg-transparent text-accent"
+                  className="py-2 focus:outline-none cursor-text custom-placeholder bg-transparent text-black"
                   type="text"
                   placeholder="Last Name *"
                   {...register("lastName")}
@@ -152,7 +152,7 @@ export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
                 } flex flex-col w-full pt-2 px-4 pb-1 border-[1.3px] border-[#6C748B] rounded-lg`}
               >
                 <input
-                  className="py-2 focus:outline-none cursor-text custom-placeholder bg-transparent text-accent"
+                  className="py-2 focus:outline-none cursor-text custom-placeholder bg-transparent text-black"
                   type="email"
                   placeholder="Email Address *"
                   {...register("email")}
@@ -169,7 +169,7 @@ export default function AddInvoice({ setShowAddInvoice }: AddInvoiceProps) {
                 } flex flex-col w-full pt-2 px-4 pb-1 border-[1.3px] border-[#6C748B] rounded-lg`}
               >
                 <input
-                  className="py-2 focus:outline-none cursor-text custom-placeholder bg-transparent text-accent"
+                  className="py-2 focus:outline-none cursor-text custom-placeholder bg-transparent text-black"
                   type="text"
                   placeholder="Amount"
                   {...register("amount")}
