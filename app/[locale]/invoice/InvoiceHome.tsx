@@ -18,6 +18,7 @@ import DeleteInvoice from "./DeleteInvoice";
 import { formatDate } from "@/utils/utils";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslations } from "next-intl";
 
 interface InvoiceData {
   _id: string;
@@ -39,11 +40,14 @@ export default function InvoiceHome() {
   const [showDeleteInvoice, setShowDeleteInvoice] = useState(false);
   const [selectedRow, setSelectedRow] = useState<InvoiceData | null>(null);
   const [searchInvoice, setSearchInvoice] = useState<string>("");
+  const t = useTranslations("InvoicePage");
 
   const { data: invoiceData, isLoading } = useQuery({
     queryKey: ["getInvoicesApi"],
     queryFn: () => GetInvoicesRequest(),
   });
+
+  console.log(invoiceData, "this is invoice data==");
 
   // create columnHelper
   const columnHelper = createColumnHelper<InvoiceData>();
@@ -52,31 +56,31 @@ export default function InvoiceHome() {
   const columns = [
     columnHelper.accessor("_id", {
       cell: (info) => <span>INV0{info.row.index + 1}</span>,
-      header: () => <span>Invoice ID</span>,
+      header: () => <span>{t("TableHeadings.invoiceId")}</span>,
     }),
     columnHelper.accessor("fullName", {
       cell: (info) => (
         <span>{`${info?.row?.original?.firstName}  ${info?.row?.original?.lastName}`}</span>
       ),
-      header: () => <span>Full Name </span>,
+      header: () => <span>{t("TableHeadings.fullName")}</span>,
     }),
     columnHelper.accessor("email", {
       cell: (info) => <span>{info?.row?.original?.email}</span>,
-      header: () => <span>Email</span>,
+      header: () => <span>{t("TableHeadings.email")}</span>,
     }),
     columnHelper.accessor("createdAt", {
       cell: (info) => (
         <span> {formatDate(info?.row?.original?.createdAt)}</span>
       ),
-      header: () => <span>Account Created Date</span>,
+      header: () => <span>{t("TableHeadings.createdDate")}</span>,
     }),
     columnHelper.accessor("amount", {
       cell: (info) => <span>₦{info?.row?.original?.amount}</span>,
-      header: () => <span>Amount</span>,
+      header: () => <span>{t("TableHeadings.amount")}</span>,
     }),
 
     columnHelper.accessor("status", {
-      header: () => <span>Status</span>,
+      header: () => <span>{t("TableHeadings.status")}</span>,
       cell: (info) => (
         <div
           className={`
@@ -131,7 +135,7 @@ export default function InvoiceHome() {
           </span>
         </div>
       ),
-      header: () => <div>Actions</div>,
+      header: () => <div>{t("TableHeadings.actions")}</div>,
     }),
   ];
 
@@ -152,9 +156,9 @@ export default function InvoiceHome() {
     <>
       <div>
         <HeaderCrumb
-          screenName="Invoice"
-          screenContent="Software and tools I use on a regular basis."
-          buttonName="Create Invoice"
+          screenName={t("HeaderCrumb.routeName")}
+          screenContent={t("HeaderCrumb.screenContent")}
+          buttonName={t("HeaderCrumb.buttonName")}
           handleButtonClick={setShowAddInvoice}
         />
       </div>

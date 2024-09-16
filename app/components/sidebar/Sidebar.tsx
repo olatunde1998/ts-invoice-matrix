@@ -1,10 +1,20 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { sidebarContactLinks, sidebarRouteLinks } from "@/lib/LinkData";
+// import { sidebarContactLinks, sidebarRouteLinks } from "@/lib/LinkData";
 import { ModeToggle } from "../modeToggle/ModeToggle";
 import Image from "next/image";
-import { LogOut, X } from "lucide-react";
+import {
+  Home,
+  User,
+  Layers3,
+  GlobeLock,
+  LogOut,
+  X,
+  ReceiptIndianRupee,
+  Settings,
+  Mail,
+} from "lucide-react";
 
 import {
   AlertDialog,
@@ -16,9 +26,24 @@ import {
 } from "@/components/ui/alert-dialog";
 
 import SignUp from "../sign-up/SignUp";
+import { useTranslations } from "next-intl";
 
 export default function SideBar({ session }: any) {
   const pathname = usePathname();
+  const t = useTranslations("Sidebar");
+  const iconMap = {
+    Home: Home,
+    User: User,
+    Layers3: Layers3,
+    GlobeLock: GlobeLock,
+  };
+  const iconMapTwo = {
+    ReceiptIndianRupee: ReceiptIndianRupee,
+    Settings: Settings,
+    Mail: Mail,
+  };
+  const keys = ["dashboard", "payment", "invoice", "clients"];
+  const keysTwo = ["report", "settings", "notifications"];
 
   return (
     <>
@@ -44,76 +69,85 @@ export default function SideBar({ session }: any) {
             <div className="hidden md:relative md:flex flex-col items-start w-full border-t md:border-slate pb-1">
               <div className="fixe left-0 w-60">
                 {/* ============ LINKS AND ICONS =========== */}
-                {sidebarRouteLinks?.map((item, index) => (
-                  <div
-                    key={index}
-                    className="mt-2 flex flex-col items-start text-sm w-full"
-                  >
-                    <div className="flex w-full">
-                      <Link
-                        href={`${item.href}`}
-                        className={`${
-                          pathname === item.href
-                            ? "rounded-sm bg-accent dark:bg-accent w-full flex"
-                            : "flex items-center"
-                        }
-                  flex items-center w-full hover:bg-accent dark:hover:bg-accent rounded-lg px-4 mx-3 py-2`}
-                      >
-                        <span>
-                          <item.icon
-                            size={16}
-                            className="h-4 w-4 group-hover:cursor-pointer mr-4 mb-1 text-primary"
-                          />
-                        </span>
-                        <p
-                          className={`${pathname === item.href ? "" : ""}
-                     text-sm hover:cursor-pointer text-foreground
-                  `}
+                {keys.map((itemKey) => {
+                  const iconName = t(`SidebarRouteLinks.${itemKey}.icon`);
+                  const IconComponent =
+                    iconMap[iconName as keyof typeof iconMap];
+                  return (
+                    <div
+                      key={itemKey}
+                      className="mt-2 flex flex-col items-start text-sm w-full"
+                    >
+                      <div className="flex w-full">
+                        <Link
+                          href={t(`SidebarRouteLinks.${itemKey}.href`)}
+                          className={`${
+                            pathname === t(`SidebarRouteLinks.${itemKey}.href`)
+                              ? "rounded-sm bg-accent dark:bg-accent w-full flex"
+                              : "flex items-center"
+                          } flex items-center w-full hover:bg-accent dark:hover:bg-accent rounded-lg px-4 mx-3 py-2`}
                         >
-                          {item.name}
-                        </p>
-                      </Link>
+                          {IconComponent && (
+                            <span className="h-4 w-4 group-hover:cursor-pointer mr-4 mb-1 text-primary">
+                              <IconComponent size={16} />
+                            </span>
+                          )}
+                          <p className="text-sm text-foreground">
+                            {t(`SidebarRouteLinks.${itemKey}.name`)}
+                          </p>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
             <div className="hidden md:flex flex-col items-start border-t border-slate  w-full md:h-32 lg:h-  mt-60 md:mt-6">
               <div className="fixed left-0 w-60">
                 {/* ============ LINKS AND ICONS =========== */}
-                {sidebarContactLinks?.map((item, index) => (
-                  <div
-                    key={index}
-                    className="mt-2 flex flex-col items-start text-sm w-full"
-                  >
-                    <div className="flex  w-full">
-                      <Link
-                        href={`${item.href}`}
-                        className={`${
-                          pathname === item.href
-                            ? "rounded-sm  bg-accent dark:bg-accent w-full"
-                            : ""
-                        }
+                {keysTwo?.map((itemKey) => {
+                  const iconName = t(`SidebarContactLinks.${itemKey}.icon`);
+                  const IconComponent =
+                    iconMapTwo[iconName as keyof typeof iconMapTwo];
+                  return (
+                    <div
+                      key={itemKey}
+                      className="mt-2 flex flex-col items-start text-sm w-full"
+                    >
+                      <div className="flex  w-full">
+                        <Link
+                          href={t(`SidebarContactLinks.${itemKey}.href`)}
+                          className={`${
+                            pathname ===
+                            t(`SidebarContactLinks.${itemKey}.href`)
+                              ? "rounded-sm  bg-accent dark:bg-accent w-full"
+                              : ""
+                          }
                   flex items-center gap-4 hover:cursor-pointer w-full hover:bg-accent dark:hover:bg-accent rounded-lg px-4 mx-3 py-2`}
-                      >
-                        <span>
-                          <item.icon
-                            size={16}
-                            className="h-4 w-4 group-hover:cursor-pointer mb-1 text-primary"
-                          />
-                        </span>
-                        <p
-                          className={`${pathname === item.href ? "" : ""}
+                        >
+                          {IconComponent && (
+                            <span className="h-4 w-4 group-hover:cursor-pointer mb-1 text-primary">
+                              <IconComponent size={16} />
+                            </span>
+                          )}
+                          <p
+                            className={`${
+                              pathname ===
+                              t(`SidebarContactLinks.${itemKey}.href`)
+                                ? ""
+                                : ""
+                            }
                      text-sm hover:cursor-pointer text-foreground
                   `}
-                        >
-                          {item.name}
-                        </p>
-                      </Link>
+                          >
+                            {t(`SidebarContactLinks.${itemKey}.name`)}
+                          </p>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -135,11 +169,11 @@ export default function SideBar({ session }: any) {
               <div className="bg-primary rounded-lg text-foreground flex items-center justify-center gap-4 p-2  cursor-pointer">
                 <AlertDialog>
                   <AlertDialogTrigger className="flex items-center text-white text-sm">
-                    <LogOut className="mr-2" size={16} /> Sign Up
+                    <LogOut className="mr-2" size={16} /> {t("buttonName")}
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogTitle className="flex justify-between">
-                      Sign Up
+                      {t("buttonName")}
                       <AlertDialogCancel>
                         <X />
                       </AlertDialogCancel>

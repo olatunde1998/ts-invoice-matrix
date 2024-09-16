@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "डैशबोर्ड",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "भुगतान",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "इनवॉइस",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "ग्राहक",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "रिपोर्ट",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "सेटिंग्स",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "सूचनाएँ",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "साइन अप करें"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "डैशबोर्ड",
+      "screenContent": "सॉफ़्टवेयर और उपकरण जो मैं नियमित रूप से उपयोग करता हूँ।",
+      "buttonName": "अभी देखें"
+    },
+    "TrashContent": {
+      "heading": "कोई मौजूदा सांख्यिकी नहीं",
+      "paragraphOne": "अभी तक कोई डेटा नहीं है। क्लिक करें",
+      "paragraphTwo": "और देखें",
+      "paragraphThree": "ऊपर दिए गए बटन पर अधिक देखने के लिए।"
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "भुगतान",
+      "screenContent": "यहां भुगतान का इतिहास है",
+      "buttonName": "अभी देखें"
+    },
+    "TrashContent": {
+      "heading": "कोई मौजूदा सांख्यिकी नहीं",
+      "paragraphOne": "अभी तक कोई डेटा नहीं है। क्लिक करें",
+      "paragraphTwo": "और देखें",
+      "paragraphThree": "ऊपर दिए गए बटन पर अधिक देखने के लिए।"
+    },
+    "PlaceholderContent": {
+      "content": "बाद में जांचें..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "इनवॉइस",
+      "screenContent": "सॉफ़्टवेयर और उपकरण जो मैं नियमित रूप से उपयोग करता हूँ।",
+      "buttonName": "इनवॉइस बनाएं"
+    },
+    "TableHeadings": {
+      "invoiceId": "इनवॉइस आईडी",
+      "fullName": "पूरा नाम",
+      "email": "ईमेल",
+      "createdDate": "खाता निर्माण तिथि",
+      "amount": "राशि",
+      "status": "स्थिति",
+      "actions": "क्रियाएँ"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "ग्राहक",
+      "screenContent": "प्लेटफ़ॉर्म के भीतर ग्राहक खाता प्रशासित करें।",
+      "buttonName": "अभी देखें"
+    },
+    "TrashContent": {
+      "heading": "कोई मौजूदा ग्राहक नहीं",
+      "paragraphOne": "अभी तक कोई ग्राहक नहीं जोड़े गए हैं। क्लिक करें",
+      "paragraphTwo": "साइन अप",
+      "paragraphThree": "नीचे दिए गए बटन पर क्लिक करके खाता बनाएं।"
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "रिपोर्ट",
+      "screenContent": "गतिविधियों के लिए रिपोर्ट विश्लेषण।",
+      "buttonName": "निर्यात करें"
+    },
+    "TrashContent": {
+      "heading": "कोई मौजूदा सांख्यिकी नहीं",
+      "paragraphOne": "अभी तक कोई डेटा नहीं है। क्लिक करें",
+      "paragraphTwo": "और देखें",
+      "paragraphThree": "ऊपर दिए गए बटन पर अधिक देखने के लिए।"
+    },
+    "PlaceholderContent": {
+      "content": "बाद में जांचें..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "सेटिंग्स",
+      "screenContent": "अपने खाते की सेटिंग्स प्रबंधित करें",
+      "buttonName": "निर्यात करें"
+    },
+    "TrashContent": {
+      "heading": "कोई मौजूदा आँकड़े नहीं",
+      "paragraphOne": "अभी तक कोई डेटा नहीं है। क्लिक करें",
+      "paragraphTwo": "और देखें",
+      "paragraphThree": "ऊपर दिए गए बटन पर अधिक देखने के लिए।"
+    },
+    "PlaceholderContent": {
+      "content": "बाद में जांचें..."
+    },
+    "FormContent": {
+      "name": "नाम",
+      "email": "ईमेल",
+      "colorScheme": "रंग योजना",
+      "buttonName": "अभी सहेजें"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "सूचनाएं",
+      "screenContent": "एप्लिकेशन में गतिविधियों के लिए सूचनाएं।",
+      "buttonName": "निर्यात करें"
+    },
+    "TrashContent": {
+      "heading": "कोई मौजूदा सूचनाएं नहीं",
+      "paragraphOne": "अभी तक कोई डेटा नहीं है। क्लिक करें",
+      "paragraphTwo": "और देखें",
+      "paragraphThree": "ऊपर दिए गए बटन पर अधिक देखने के लिए।"
+    },
+    "PlaceholderContent": {
+      "content": "बाद में जांचें..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "सभी अधिकार सुरक्षित हैं।",
+    "FooterLinks": {
+      "terms": {
+        "name": "सेवा की शर्तें",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "गोपनीयता नीति",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "संपर्क करें",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "हमारे बारे में",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Trash } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { GetClientsRequest } from "@/app/services/clients.request";
 import HeaderCrumb from "@/app/components/header-crumb/HeaderCrumb";
@@ -15,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DeleteClient from "./DeleteClient";
 import AddClient from "./AddClient";
+import { useTranslations } from "next-intl";
 
 interface ClientsData {
   _id: string;
@@ -31,6 +31,7 @@ export default function ClientsHome() {
   const [showDeleteClient, setShowDeleteClient] = useState(false);
   const [selectedRow, setSelectedRow] = useState<ClientsData | null>(null);
   const [searchClient, setSearchClient] = useState<string>("");
+  const t = useTranslations("ClientsPage");
 
   const { data: clientsData, isLoading } = useQuery({
     queryKey: ["getClientsApi"],
@@ -115,8 +116,8 @@ export default function ClientsHome() {
     <>
       <div>
         <HeaderCrumb
-          screenName="Clients"
-          screenContent="Administer client account within the platform."
+          screenName={t("HeaderCrumb.routeName")}
+          screenContent={t("HeaderCrumb.screenContent")}
           // buttonName="Create Client"
           // handleButtonClick={setShowAddClient}
         />
@@ -135,14 +136,14 @@ export default function ClientsHome() {
             {/* ====EMPTY TRASH GOES HERE === */}
             <div className="lg:mt-20">
               <TrashPage
-                headingText="No Existing Clients"
+                headingText={t("TrashContent.heading")}
                 subHeadingText={
                   <span>
-                    No clients have been added yet. Click the{" "}
+                    {t("TrashContent.paragraphOne")}{" "}
                     <span className="text-primary mx-1">
-                      &apos;Sign Up&apos;
+                      &apos;{t("TrashContent.paragraphTwo")}&apos;
                     </span>{" "}
-                    button below to create account.
+                    {t("TrashContent.paragraphThree")}
                   </span>
                 }
               />

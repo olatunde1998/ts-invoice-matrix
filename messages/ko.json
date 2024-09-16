@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "대시보드",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "결제",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "송장",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "고객",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "보고서",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "설정",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "알림",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "가입하기"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "대시보드",
+      "screenContent": "정기적으로 사용하는 소프트웨어 및 도구.",
+      "buttonName": "지금 보기"
+    },
+    "TrashContent": {
+      "heading": "통계 없음",
+      "paragraphOne": "아직 데이터가 없습니다. 클릭하세요",
+      "paragraphTwo": "더 보기",
+      "paragraphThree": "위 버튼을 눌러 더 보기."
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "결제",
+      "screenContent": "여기 결제 내역이 있습니다",
+      "buttonName": "지금 보기"
+    },
+    "TrashContent": {
+      "heading": "통계 없음",
+      "paragraphOne": "아직 데이터가 없습니다. 클릭하세요",
+      "paragraphTwo": "더 보기",
+      "paragraphThree": "위 버튼을 눌러 더 보기."
+    },
+    "PlaceholderContent": {
+      "content": "나중에 다시 확인하세요..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "송장",
+      "screenContent": "정기적으로 사용하는 소프트웨어와 도구.",
+      "buttonName": "송장 생성"
+    },
+    "TableHeadings": {
+      "invoiceId": "송장 ID",
+      "fullName": "성명",
+      "email": "이메일",
+      "createdDate": "계정 생성 날짜",
+      "amount": "금액",
+      "status": "상태",
+      "actions": "작업"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "고객",
+      "screenContent": "플랫폼 내에서 클라이언트 계정을 관리하세요.",
+      "buttonName": "지금 보기"
+    },
+    "TrashContent": {
+      "heading": "존재하는 고객 없음",
+      "paragraphOne": "아직 추가된 고객이 없습니다. 클릭하세요",
+      "paragraphTwo": "회원가입",
+      "paragraphThree": "아래 버튼을 눌러 계정을 생성하세요."
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "보고서",
+      "screenContent": "활동에 대한 보고서 분석.",
+      "buttonName": "내보내기"
+    },
+    "TrashContent": {
+      "heading": "통계 없음",
+      "paragraphOne": "아직 데이터가 없습니다. 클릭하세요",
+      "paragraphTwo": "더 보기",
+      "paragraphThree": "위 버튼을 눌러 더 보기."
+    },
+    "PlaceholderContent": {
+      "content": "나중에 다시 확인하세요..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "설정",
+      "screenContent": "계정 설정 관리",
+      "buttonName": "내보내기"
+    },
+    "TrashContent": {
+      "heading": "통계 없음",
+      "paragraphOne": "아직 데이터가 없습니다. 클릭하세요",
+      "paragraphTwo": "더 보기",
+      "paragraphThree": "위 버튼을 눌러 더 보기."
+    },
+    "PlaceholderContent": {
+      "content": "나중에 다시 확인하세요..."
+    },
+    "FormContent": {
+      "name": "이름",
+      "email": "이메일",
+      "colorScheme": "색상 구성",
+      "buttonName": "지금 저장"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "알림",
+      "screenContent": "앱 내 활동에 대한 알림.",
+      "buttonName": "내보내기"
+    },
+    "TrashContent": {
+      "heading": "알림 없음",
+      "paragraphOne": "아직 데이터가 없습니다. 클릭하세요",
+      "paragraphTwo": "더 보기",
+      "paragraphThree": "위 버튼을 눌러 더 보기."
+    },
+    "PlaceholderContent": {
+      "content": "나중에 다시 확인하세요..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "모든 권리 보유.",
+    "FooterLinks": {
+      "terms": {
+        "name": "서비스 약관",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "개인정보 보호정책",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "연락처",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "정보",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "لوحة القيادة",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "الدفع",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "فاتورة",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "العملاء",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "تقرير",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "الإعدادات",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "إشعارات",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "اشترك"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "لوحة القيادة",
+      "screenContent": "البرامج والأدوات التي أستخدمها بانتظام.",
+      "buttonName": "عرض الآن"
+    },
+    "TrashContent": {
+      "heading": "لا توجد إحصائيات متاحة",
+      "paragraphOne": "لا توجد بيانات بعد. انقر على",
+      "paragraphTwo": "عرض المزيد",
+      "paragraphThree": "الزر أعلاه لعرض المزيد."
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "المدفوعات",
+      "screenContent": "إليك سجل المدفوعات",
+      "buttonName": "عرض الآن"
+    },
+    "TrashContent": {
+      "heading": "لا توجد إحصائيات متاحة",
+      "paragraphOne": "لا توجد بيانات بعد. انقر على",
+      "paragraphTwo": "عرض المزيد",
+      "paragraphThree": "الزر أعلاه لعرض المزيد."
+    },
+    "PlaceholderContent": {
+      "content": "تحقق لاحقاً..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "فاتورة",
+      "screenContent": "البرامج والأدوات التي أستخدمها بانتظام.",
+      "buttonName": "إنشاء فاتورة"
+    },
+    "TableHeadings": {
+      "invoiceId": "معرّف الفاتورة",
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "createdDate": "تاريخ إنشاء الحساب",
+      "amount": "المبلغ",
+      "status": "الحالة",
+      "actions": "الإجراءات"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "العملاء",
+      "screenContent": "إدارة حساب العميل داخل المنصة.",
+      "buttonName": "عرض الآن"
+    },
+    "TrashContent": {
+      "heading": "لا يوجد عملاء",
+      "paragraphOne": "لم تتم إضافة أي عملاء بعد. انقر على",
+      "paragraphTwo": "اشتراك",
+      "paragraphThree": "الزر أدناه لإنشاء حساب."
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "تقرير",
+      "screenContent": "تحليل التقرير للأنشطة.",
+      "buttonName": "تصدير"
+    },
+    "TrashContent": {
+      "heading": "لا توجد إحصائيات متاحة",
+      "paragraphOne": "لا توجد بيانات بعد. انقر على",
+      "paragraphTwo": "عرض المزيد",
+      "paragraphThree": "الزر أعلاه لعرض المزيد."
+    },
+    "PlaceholderContent": {
+      "content": "تحقق لاحقاً..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "الإعدادات",
+      "screenContent": "إدارة إعدادات حسابك",
+      "buttonName": "تصدير"
+    },
+    "TrashContent": {
+      "heading": "لا توجد إحصاءات",
+      "paragraphOne": "لا توجد بيانات بعد. انقر على",
+      "paragraphTwo": "عرض المزيد",
+      "paragraphThree": "الزر أعلاه لعرض المزيد."
+    },
+    "PlaceholderContent": {
+      "content": "تحقق لاحقاً..."
+    },
+    "FormContent": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "colorScheme": "نظام الألوان",
+      "buttonName": "احفظ الآن"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "الإشعارات",
+      "screenContent": "إشعارات الأنشطة في التطبيق.",
+      "buttonName": "تصدير"
+    },
+    "TrashContent": {
+      "heading": "لا توجد إشعارات متاحة",
+      "paragraphOne": "لا توجد بيانات بعد. انقر على",
+      "paragraphTwo": "عرض المزيد",
+      "paragraphThree": "الزر أعلاه لعرض المزيد."
+    },
+    "PlaceholderContent": {
+      "content": "تحقق لاحقاً..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "جميع الحقوق محفوظة.",
+    "FooterLinks": {
+      "terms": {
+        "name": "شروط الخدمة",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "سياسة الخصوصية",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "اتصال",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "معلومات عنا",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}

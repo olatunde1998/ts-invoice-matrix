@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import HeaderCrumb from "@/app/components/header-crumb/HeaderCrumb";
+import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Settings | geodevcodes",
@@ -8,19 +9,20 @@ export const metadata: Metadata = {
 };
 
 export default function Settings() {
+  const t = useTranslations("SettingPage");
   return (
     <main className="min-h-screen px-4 p-2 md:p-8 font-sans text-md">
       <div>
         <HeaderCrumb
-          screenName="Settings"
-          screenContent="Manage the settings of your account"
+          screenName={t("HeaderCrumb.routeName")}
+          screenContent={t("HeaderCrumb.screenContent")}
         />
       </div>
       <section className="h-fit border border-accent-primary mt-8 p-6 rounded-md">
         {/* ====Name === */}
         <div>
           <label htmlFor="name">
-            <span>Name</span>
+            <span>{t("FormContent.name")}</span>
             <input
               type="text"
               placeholder="Full name"
@@ -32,7 +34,7 @@ export default function Settings() {
         {/* ====Email === */}
         <div className="mt-3">
           <label htmlFor="email">
-            <span>Email</span>
+            <span>{t("FormContent.email")}</span>
             <input
               type="email"
               placeholder="Email"
@@ -44,7 +46,7 @@ export default function Settings() {
         {/* ====Color Scheme === */}
         <div className="mt-3">
           <label htmlFor="colorScheme">
-            <span>Color Scheme</span>
+            <span>{t("FormContent.colorScheme")}</span>
             <input
               type="Color Scheme"
               placeholder="Color"
@@ -53,7 +55,7 @@ export default function Settings() {
           </label>
         </div>
         <div className="mt-3">
-          <Button>Save Now</Button>
+          <Button>{t("FormContent.buttonName")}</Button>
         </div>
       </section>
     </main>

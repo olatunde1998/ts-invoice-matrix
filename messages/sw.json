@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "Dashibodi",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "Malipo",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "Ankara",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "Wateja",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "Ripoti",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "Mipangilio",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "Arifa",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "Jisajili"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "Dashibodi",
+      "screenContent": "Programu na zana ninazotumia mara kwa mara.",
+      "buttonName": "Tazama Sasa"
+    },
+    "TrashContent": {
+      "heading": "Hakuna Takwimu Zilizopo",
+      "paragraphOne": "Bado hakuna data. Bonyeza",
+      "paragraphTwo": "Tazama Zaidi",
+      "paragraphThree": "kitufe hapo juu ili kuona zaidi."
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "Malipo",
+      "screenContent": "Hapa ni historia ya malipo",
+      "buttonName": "Tazama Sasa"
+    },
+    "TrashContent": {
+      "heading": "Hakuna Takwimu Zilizopo",
+      "paragraphOne": "Bado hakuna data. Bonyeza",
+      "paragraphTwo": "Tazama Zaidi",
+      "paragraphThree": "kitufe hapo juu ili kuona zaidi."
+    },
+    "PlaceholderContent": {
+      "content": "Rudi Baadaye..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "Ankara",
+      "screenContent": "Programu na zana ninazotumia mara kwa mara.",
+      "buttonName": "Unda Ankara"
+    },
+    "TableHeadings": {
+      "invoiceId": "Kitambulisho cha Ankara",
+      "fullName": "Jina Kamili",
+      "email": "Barua Pepe",
+      "createdDate": "Tarehe ya Kuundwa kwa Akaunti",
+      "amount": "Kiasi",
+      "status": "Hali",
+      "actions": "Vitendo"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "Wateja",
+      "screenContent": "Simamia akaunti za wateja ndani ya jukwaa.",
+      "buttonName": "Tazama Sasa"
+    },
+    "TrashContent": {
+      "heading": "Hakuna Wateja Waliopo",
+      "paragraphOne": "Bado hakuna wateja waliowekwa. Bonyeza",
+      "paragraphTwo": "Jisajili",
+      "paragraphThree": "kitufe kilicho hapa chini ili kuunda akaunti."
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "Ripoti",
+      "screenContent": "Uchambuzi wa ripoti kwa shughuli.",
+      "buttonName": "Hamisha"
+    },
+    "TrashContent": {
+      "heading": "Hakuna Takwimu Zilizopo",
+      "paragraphOne": "Bado hakuna data. Bonyeza",
+      "paragraphTwo": "Tazama Zaidi",
+      "paragraphThree": "kitufe hapo juu ili kuona zaidi."
+    },
+    "PlaceholderContent": {
+      "content": "Rudi Baadaye..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "Mipangilio",
+      "screenContent": "Simamia mipangilio ya akaunti yako",
+      "buttonName": "Hamisha"
+    },
+    "TrashContent": {
+      "heading": "Hakuna Takwimu Zilizopo",
+      "paragraphOne": "Bado hakuna data. Bonyeza",
+      "paragraphTwo": "Tazama Zaidi",
+      "paragraphThree": "kitufe hapo juu ili kuona zaidi."
+    },
+    "PlaceholderContent": {
+      "content": "Rudi Baadaye..."
+    },
+    "FormContent": {
+      "name": "Jina",
+      "email": "Barua Pepe",
+      "colorScheme": "Mpango wa Rangi",
+      "buttonName": "Hifadhi Sasa"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "Arifa",
+      "screenContent": "Arifa za shughuli kwenye programu.",
+      "buttonName": "Hamisha"
+    },
+    "TrashContent": {
+      "heading": "Hakuna Arifa Zilizopo",
+      "paragraphOne": "Bado hakuna data. Bonyeza",
+      "paragraphTwo": "Tazama Zaidi",
+      "paragraphThree": "kitufe hapo juu ili kuona zaidi."
+    },
+    "PlaceholderContent": {
+      "content": "Rudi Baadaye..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "Haki zote zimehifadhiwa.",
+    "FooterLinks": {
+      "terms": {
+        "name": "Masharti ya Huduma",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "Sera ya Faragha",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "Mawasiliano",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "Kuhusu",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "Dasbor",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "Pembayaran",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "Faktur",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "Klien",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "Laporan",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "Pengaturan",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "Notifikasi",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "Daftar"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "Dasbor",
+      "screenContent": "Perangkat lunak dan alat yang saya gunakan secara teratur.",
+      "buttonName": "Lihat Sekarang"
+    },
+    "TrashContent": {
+      "heading": "Tidak Ada Statistik",
+      "paragraphOne": "Belum ada data. Klik",
+      "paragraphTwo": "Lihat Lebih Banyak",
+      "paragraphThree": "tombol di atas untuk melihat lebih banyak."
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "Pembayaran",
+      "screenContent": "Ini adalah riwayat pembayaran",
+      "buttonName": "Lihat Sekarang"
+    },
+    "TrashContent": {
+      "heading": "Tidak Ada Statistik",
+      "paragraphOne": "Belum ada data. Klik",
+      "paragraphTwo": "Lihat Lebih Banyak",
+      "paragraphThree": "tombol di atas untuk melihat lebih banyak."
+    },
+    "PlaceholderContent": {
+      "content": "Periksa Kembali Nanti..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "Faktur",
+      "screenContent": "Perangkat lunak dan alat yang saya gunakan secara teratur.",
+      "buttonName": "Buat Faktur"
+    },
+    "TableHeadings": {
+      "invoiceId": "ID Faktur",
+      "fullName": "Nama Lengkap",
+      "email": "Email",
+      "createdDate": "Tanggal Pembuatan Akun",
+      "amount": "Jumlah",
+      "status": "Status",
+      "actions": "Tindakan"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "Klien",
+      "screenContent": "Kelola akun klien di dalam platform.",
+      "buttonName": "Lihat Sekarang"
+    },
+    "TrashContent": {
+      "heading": "Tidak Ada Klien yang Ada",
+      "paragraphOne": "Belum ada klien yang ditambahkan. Klik",
+      "paragraphTwo": "Daftar",
+      "paragraphThree": "tombol di bawah untuk membuat akun."
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "Laporan",
+      "screenContent": "Analisis laporan untuk aktivitas.",
+      "buttonName": "Ekspor"
+    },
+    "TrashContent": {
+      "heading": "Tidak Ada Statistik",
+      "paragraphOne": "Belum ada data. Klik",
+      "paragraphTwo": "Lihat Lebih Banyak",
+      "paragraphThree": "tombol di atas untuk melihat lebih banyak."
+    },
+    "PlaceholderContent": {
+      "content": "Periksa Kembali Nanti..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "Pengaturan",
+      "screenContent": "Kelola pengaturan akun Anda",
+      "buttonName": "Ekspor"
+    },
+    "TrashContent": {
+      "heading": "Tidak Ada Statistik",
+      "paragraphOne": "Belum ada data. Klik",
+      "paragraphTwo": "Lihat Lebih Banyak",
+      "paragraphThree": "tombol di atas untuk melihat lebih banyak."
+    },
+    "PlaceholderContent": {
+      "content": "Periksa Kembali Nanti..."
+    },
+    "FormContent": {
+      "name": "Nama",
+      "email": "Email",
+      "colorScheme": "Skema Warna",
+      "buttonName": "Simpan Sekarang"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "Notifikasi",
+      "screenContent": "Notifikasi untuk aktivitas di dalam aplikasi.",
+      "buttonName": "Ekspor"
+    },
+    "TrashContent": {
+      "heading": "Tidak Ada Notifikasi",
+      "paragraphOne": "Belum ada data. Klik",
+      "paragraphTwo": "Lihat Lebih Banyak",
+      "paragraphThree": "tombol di atas untuk melihat lebih banyak."
+    },
+    "PlaceholderContent": {
+      "content": "Periksa Kembali Nanti..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "Hak cipta dilindungi.",
+    "FooterLinks": {
+      "terms": {
+        "name": "Syarat Layanan",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "Kebijakan Privasi",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "Kontak",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "Tentang",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}

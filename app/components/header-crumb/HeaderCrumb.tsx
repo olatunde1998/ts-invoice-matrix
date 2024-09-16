@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Plus, Download } from "lucide-react";
 import { usePathname } from "next/navigation";
+import LocalSwitcher from "../local-switcher/LocalSwitcher";
 
 interface HeaderCrumbProps {
   screenName: string;
@@ -24,20 +25,23 @@ export default function HeaderCrumb({
           <p className="text-2xl md:text-5xl font-bold mb-2">{screenName}</p>
           <p className="text-muted-foreground">{screenContent}</p>
         </div>
-        <div
-          onClick={() => handleButtonClick(true)}
-          className={`${
-            buttonName === undefined ? "hidden" : "block"
-          } my-4 md:my-0  md:w-[200px] lg:w-[180px]`}
-        >
-          <Button className="w-full  p-6 justify-center items-center gap-[8px]">
-            <p className="text-white text-sm md:text-md">{buttonName}</p>
-            {pathname !== "/report" ? (
-              <Plus className="w-4 h-4 md:w-5 md:h-5" />
-            ) : (
-              <Download className="w-4 h-4 md:w-5 md:h-5" />
-            )}
-          </Button>
+        <div className="md:flex gap-4  space-y-6 md:space-y-0 mt-6 md:mt-0">
+          <LocalSwitcher />
+          <div
+            onClick={() => handleButtonClick(true)}
+            className={`${
+              buttonName === undefined ? "hidden" : "block"
+            } my-4 md:my-0  md:w-[200px] lg:w-[180px]`}
+          >
+            <Button className="w-full  p-6 justify-center items-center gap-[8px]">
+              <p className="text-white text-sm md:text-md">{buttonName}</p>
+              {pathname !== "/report" ? (
+                <Plus className="w-4 h-4 md:w-5 md:h-5" />
+              ) : (
+                <Download className="w-4 h-4 md:w-5 md:h-5" />
+              )}
+            </Button>
+          </div>
         </div>
       </div>
     </>

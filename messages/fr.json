@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "Tableau de Bord",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "Paiement",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "Facture",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "Clients",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "Rapport",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "Paramètres",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "Notifications",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "S'inscrire"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "Tableau de Bord",
+      "screenContent": "Logiciels et outils que j'utilise régulièrement.",
+      "buttonName": "Voir Maintenant"
+    },
+    "TrashContent": {
+      "heading": "Aucune Statistique Existant",
+      "paragraphOne": "Pas encore de données. Cliquez sur",
+      "paragraphTwo": "Voir Plus",
+      "paragraphThree": "bouton ci-dessus pour en savoir plus."
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "Paiements",
+      "screenContent": "Voici l'historique des paiements",
+      "buttonName": "Voir Maintenant"
+    },
+    "TrashContent": {
+      "heading": "Aucune Statistique Existant",
+      "paragraphOne": "Pas encore de données. Cliquez sur",
+      "paragraphTwo": "Voir Plus",
+      "paragraphThree": "le bouton ci-dessus pour voir plus."
+    },
+    "PlaceholderContent": {
+      "content": "Revenez Plus Tard..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "Facture",
+      "screenContent": "Logiciels et outils que j'utilise régulièrement.",
+      "buttonName": "Créer une facture"
+    },
+    "TableHeadings": {
+      "invoiceId": "ID de Facture",
+      "fullName": "Nom Complet",
+      "email": "Email",
+      "createdDate": "Date de Création du Compte",
+      "amount": "Montant",
+      "status": "Statut",
+      "actions": "Actions"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "Clients",
+      "screenContent": "Gérer les comptes clients au sein de la plateforme.",
+      "buttonName": "Voir Maintenant"
+    },
+    "TrashContent": {
+      "heading": "Aucun Client Existant",
+      "paragraphOne": "Aucun client n'a encore été ajouté. Cliquez sur",
+      "paragraphTwo": "S'inscrire",
+      "paragraphThree": "le bouton ci-dessous pour créer un compte."
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "Rapport",
+      "screenContent": "Analyse des rapports pour les activités.",
+      "buttonName": "Exporter"
+    },
+    "TrashContent": {
+      "heading": "Aucune Statistique Existant",
+      "paragraphOne": "Pas encore de données. Cliquez sur",
+      "paragraphTwo": "Voir Plus",
+      "paragraphThree": "le bouton ci-dessus pour voir plus."
+    },
+    "PlaceholderContent": {
+      "content": "Revenez Plus Tard..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "Paramètres",
+      "screenContent": "Gérer les paramètres de votre compte",
+      "buttonName": "Exporter"
+    },
+    "TrashContent": {
+      "heading": "Aucune Statistique Existant",
+      "paragraphOne": "Pas encore de données. Cliquez sur",
+      "paragraphTwo": "Voir Plus",
+      "paragraphThree": "le bouton ci-dessus pour voir plus."
+    },
+    "PlaceholderContent": {
+      "content": "Revenez Plus Tard..."
+    },
+    "FormContent": {
+      "name": "Nom",
+      "email": "Email",
+      "colorScheme": "Schéma de Couleur",
+      "buttonName": "Enregistrer Maintenant"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "Notifications",
+      "screenContent": "Notification des activités dans l'application.",
+      "buttonName": "Exporter"
+    },
+    "TrashContent": {
+      "heading": "Aucune Notification Existant",
+      "paragraphOne": "Pas encore de données. Cliquez sur",
+      "paragraphTwo": "Voir Plus",
+      "paragraphThree": "le bouton ci-dessus pour voir plus."
+    },
+    "PlaceholderContent": {
+      "content": "Revenez Plus Tard..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "Tous droits réservés.",
+    "FooterLinks": {
+      "terms": {
+        "name": "Conditions de Service",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "Politique de Confidentialité",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "Contact",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "À Propos",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}

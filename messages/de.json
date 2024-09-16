@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "Instrumententafel",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "Zahlung",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "Rechnung",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "Kunden",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "Bericht",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "Einstellungen",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "Benachrichtigungen",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "Anmelden"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "Instrumententafel",
+      "screenContent": "Software und Werkzeuge, die ich regelmäßig benutze.",
+      "buttonName": "Jetzt Ansehen"
+    },
+    "TrashContent": {
+      "heading": "Keine Vorhandene Statistik",
+      "paragraphOne": "Noch keine Daten. Klicken Sie auf",
+      "paragraphTwo": "Mehr Anzeigen",
+      "paragraphThree": "Schaltfläche oben, um mehr zu sehen."
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "Zahlungen",
+      "screenContent": "Hier ist die Zahlungshistorie",
+      "buttonName": "Jetzt Ansehen"
+    },
+    "TrashContent": {
+      "heading": "Keine Vorhandene Statistik",
+      "paragraphOne": "Noch keine Daten. Klicken Sie auf",
+      "paragraphTwo": "Mehr Anzeigen",
+      "paragraphThree": "die Schaltfläche oben, um mehr zu sehen."
+    },
+    "PlaceholderContent": {
+      "content": "Später Wieder Vorbeischauen..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "Rechnung",
+      "screenContent": "Software und Werkzeuge, die ich regelmäßig benutze.",
+      "buttonName": "Rechnung erstellen"
+    },
+    "TableHeadings": {
+      "invoiceId": "Rechnungs-ID",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail",
+      "createdDate": "Erstellungsdatum des Kontos",
+      "amount": "Betrag",
+      "status": "Status",
+      "actions": "Aktionen"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "Kunden",
+      "screenContent": "Verwalten Sie Kundenkonten auf der Plattform.",
+      "buttonName": "Jetzt Ansehen"
+    },
+    "TrashContent": {
+      "heading": "Keine Vorhandenen Kunden",
+      "paragraphOne": "Es wurden noch keine Kunden hinzugefügt. Klicken Sie auf",
+      "paragraphTwo": "Anmelden",
+      "paragraphThree": "die Schaltfläche unten, um ein Konto zu erstellen."
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "Bericht",
+      "screenContent": "Berichtsanalyse für Aktivitäten.",
+      "buttonName": "Exportieren"
+    },
+    "TrashContent": {
+      "heading": "Keine Vorhandene Statistik",
+      "paragraphOne": "Noch keine Daten. Klicken Sie auf",
+      "paragraphTwo": "Mehr Anzeigen",
+      "paragraphThree": "die Schaltfläche oben, um mehr zu sehen."
+    },
+    "PlaceholderContent": {
+      "content": "Später Wieder Vorbeischauen..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "Einstellungen",
+      "screenContent": "Verwalten Sie die Einstellungen Ihres Kontos",
+      "buttonName": "Exportieren"
+    },
+    "TrashContent": {
+      "heading": "Keine Vorhandene Statistik",
+      "paragraphOne": "Noch keine Daten. Klicken Sie auf",
+      "paragraphTwo": "Mehr Anzeigen",
+      "paragraphThree": "die Schaltfläche oben, um mehr zu sehen."
+    },
+    "PlaceholderContent": {
+      "content": "Später Wieder Vorbeischauen..."
+    },
+    "FormContent": {
+      "name": "Name",
+      "email": "E-Mail",
+      "colorScheme": "Farbschema",
+      "buttonName": "Jetzt Speichern"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "Benachrichtigungen",
+      "screenContent": "Benachrichtigung für Aktivitäten in der Anwendung.",
+      "buttonName": "Exportieren"
+    },
+    "TrashContent": {
+      "heading": "Keine Vorhandene Benachrichtigung",
+      "paragraphOne": "Noch keine Daten. Klicken Sie auf",
+      "paragraphTwo": "Mehr Anzeigen",
+      "paragraphThree": "die Schaltfläche oben, um mehr zu sehen."
+    },
+    "PlaceholderContent": {
+      "content": "Später Wieder Vorbeischauen..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "Alle Rechte vorbehalten.",
+    "FooterLinks": {
+      "terms": {
+        "name": "Nutzungsbedingungen",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "Datenschutzrichtlinie",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "Kontakt",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "Über",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}
