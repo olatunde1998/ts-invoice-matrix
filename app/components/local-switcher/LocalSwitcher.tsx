@@ -28,7 +28,9 @@ export default function LocalSwitcher() {
         <option value="id">🇮🇩 Indonesia</option>
         <option value="hi">🇮🇳 India</option>
         <option value="en">🇺🇸 United State</option>
+        <option value="ja">🗾 Japan</option>
         <option value="en">🇬🇧 United Kingdom</option>
+        <option value="zh-hans"> China</option>
         <option value="fr">🇫🇷 France</option>
         <option value="ar">🇸🇦 Arabic</option>
         <option value="de">🇩🇪 Germany</option>

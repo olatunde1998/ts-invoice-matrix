@@ -29,7 +29,8 @@ export default async function RootLayout({
 }: Readonly<RootLayoutProps>) {
   const messages = await getMessages();
   return (
-    <html lang={locale}>
+    // <html lang={locale}>
+    <html lang="en">
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <TanStackProvider>

@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "仪表盘",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "付款",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "发票",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "客户",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "报告",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "设置",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "通知",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "注册"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "仪表盘",
+      "screenContent": "我经常使用的软件和工具。",
+      "buttonName": "立即查看"
+    },
+    "TrashContent": {
+      "heading": "没有现有统计数据",
+      "paragraphOne": "暂无数据。点击",
+      "paragraphTwo": "查看更多",
+      "paragraphThree": "按钮以查看更多内容。"
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "付款",
+      "screenContent": "这是付款历史",
+      "buttonName": "立即查看"
+    },
+    "TrashContent": {
+      "heading": "没有现有统计数据",
+      "paragraphOne": "暂无数据。点击",
+      "paragraphTwo": "查看更多",
+      "paragraphThree": "按钮以查看更多内容。"
+    },
+    "PlaceholderContent": {
+      "content": "请稍后再来..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "发票",
+      "screenContent": "我经常使用的软件和工具。",
+      "buttonName": "创建发票"
+    },
+    "TableHeadings": {
+      "invoiceId": "发票编号",
+      "fullName": "全名",
+      "email": "电子邮件",
+      "createdDate": "账户创建日期",
+      "amount": "金额",
+      "status": "状态",
+      "actions": "操作"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "客户",
+      "screenContent": "在平台内管理客户账户。",
+      "buttonName": "立即查看"
+    },
+    "TrashContent": {
+      "heading": "没有现有客户",
+      "paragraphOne": "尚未添加客户。点击",
+      "paragraphTwo": "注册",
+      "paragraphThree": "按钮以创建账户。"
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "报告",
+      "screenContent": "活动的报告分析。",
+      "buttonName": "导出"
+    },
+    "TrashContent": {
+      "heading": "没有现有统计数据",
+      "paragraphOne": "暂无数据。点击",
+      "paragraphTwo": "查看更多",
+      "paragraphThree": "按钮以查看更多内容。"
+    },
+    "PlaceholderContent": {
+      "content": "请稍后再来..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "设置",
+      "screenContent": "管理您的账户设置",
+      "buttonName": "导出"
+    },
+    "TrashContent": {
+      "heading": "没有现有统计数据",
+      "paragraphOne": "暂无数据。点击",
+      "paragraphTwo": "查看更多",
+      "paragraphThree": "按钮以查看更多内容。"
+    },
+    "PlaceholderContent": {
+      "content": "请稍后再来..."
+    },
+    "FormContent": {
+      "name": "名称",
+      "email": "电子邮件",
+      "colorScheme": "配色方案",
+      "buttonName": "立即保存"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "通知",
+      "screenContent": "应用程序中的活动通知。",
+      "buttonName": "导出"
+    },
+    "TrashContent": {
+      "heading": "没有现有通知",
+      "paragraphOne": "暂无数据。点击",
+      "paragraphTwo": "查看更多",
+      "paragraphThree": "按钮以查看更多内容。"
+    },
+    "PlaceholderContent": {
+      "content": "请稍后再来..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "版权所有。",
+    "FooterLinks": {
+      "terms": {
+        "name": "服务条款",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "隐私政策",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "联系",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "关于",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}

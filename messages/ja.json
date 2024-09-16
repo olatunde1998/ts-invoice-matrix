@@ -1,0 +1,189 @@
+{
+  "Sidebar": {
+    "SidebarRouteLinks": {
+      "dashboard": {
+        "name": "ダッシュボード",
+        "href": "/",
+        "key": "dashboard",
+        "icon": "Home"
+      },
+      "payment": {
+        "name": "支払い",
+        "href": "/payment",
+        "key": "payment",
+        "icon": "GlobeLock"
+      },
+      "invoice": {
+        "name": "請求書",
+        "href": "/invoice",
+        "key": "invoice",
+        "icon": "Layers3"
+      },
+      "clients": {
+        "name": "クライアント",
+        "href": "/clients",
+        "key": "clients",
+        "icon": "User"
+      }
+    },
+    "SidebarContactLinks": {
+      "report": {
+        "name": "レポート",
+        "href": "/report",
+        "key": "report",
+        "icon": "ReceiptIndianRupee"
+      },
+      "settings": {
+        "name": "設定",
+        "href": "/settings",
+        "key": "settings",
+        "icon": "Settings"
+      },
+      "notifications": {
+        "name": "通知",
+        "href": "/notifications",
+        "key": "notifications",
+        "icon": "Mail"
+      }
+    },
+    "buttonName": "サインアップ"
+  },
+  "DashboardPage": {
+    "HeaderCrumb": {
+      "routeName": "ダッシュボード",
+      "screenContent": "定期的に使用するソフトウェアとツール。",
+      "buttonName": "今すぐ見る"
+    },
+    "TrashContent": {
+      "heading": "既存の統計はありません",
+      "paragraphOne": "まだデータがありません。クリックして",
+      "paragraphTwo": "もっと見る",
+      "paragraphThree": "ボタンを押して詳細を表示します。"
+    }
+  },
+  "PaymentPage": {
+    "HeaderCrumb": {
+      "routeName": "支払い",
+      "screenContent": "これが支払い履歴です",
+      "buttonName": "今すぐ見る"
+    },
+    "TrashContent": {
+      "heading": "既存の統計はありません",
+      "paragraphOne": "まだデータがありません。クリックして",
+      "paragraphTwo": "もっと見る",
+      "paragraphThree": "ボタンを押して詳細を表示します。"
+    },
+    "PlaceholderContent": {
+      "content": "後で再確認してください..."
+    }
+  },
+  "InvoicePage": {
+    "HeaderCrumb": {
+      "routeName": "請求書",
+      "screenContent": "定期的に使用するソフトウェアとツール。",
+      "buttonName": "請求書を作成"
+    },
+    "TableHeadings": {
+      "invoiceId": "請求書ID",
+      "fullName": "氏名",
+      "email": "メール",
+      "createdDate": "アカウント作成日",
+      "amount": "金額",
+      "status": "ステータス",
+      "actions": "操作"
+    }
+  },
+  "ClientsPage": {
+    "HeaderCrumb": {
+      "routeName": "クライアント",
+      "screenContent": "プラットフォーム内でクライアントアカウントを管理します。",
+      "buttonName": "今すぐ見る"
+    },
+    "TrashContent": {
+      "heading": "既存のクライアントはありません",
+      "paragraphOne": "まだクライアントが追加されていません。クリックして",
+      "paragraphTwo": "サインアップ",
+      "paragraphThree": "ボタンを押してアカウントを作成します。"
+    }
+  },
+  "ReportPage": {
+    "HeaderCrumb": {
+      "routeName": "レポート",
+      "screenContent": "アクティビティのレポート分析。",
+      "buttonName": "エクスポート"
+    },
+    "TrashContent": {
+      "heading": "既存の統計はありません",
+      "paragraphOne": "まだデータがありません。クリックして",
+      "paragraphTwo": "もっと見る",
+      "paragraphThree": "ボタンを押して詳細を表示します。"
+    },
+    "PlaceholderContent": {
+      "content": "後で再確認してください..."
+    }
+  },
+  "SettingPage": {
+    "HeaderCrumb": {
+      "routeName": "設定",
+      "screenContent": "アカウント設定を管理します",
+      "buttonName": "エクスポート"
+    },
+    "TrashContent": {
+      "heading": "既存の統計はありません",
+      "paragraphOne": "まだデータがありません。クリックして",
+      "paragraphTwo": "もっと見る",
+      "paragraphThree": "ボタンを押して詳細を表示します。"
+    },
+    "PlaceholderContent": {
+      "content": "後で再確認してください..."
+    },
+    "FormContent": {
+      "name": "名前",
+      "email": "メール",
+      "colorScheme": "カラースキーム",
+      "buttonName": "今すぐ保存"
+    }
+  },
+  "NotificationPage": {
+    "HeaderCrumb": {
+      "routeName": "通知",
+      "screenContent": "アプリケーションのアクティビティ通知。",
+      "buttonName": "エクスポート"
+    },
+    "TrashContent": {
+      "heading": "既存の通知はありません",
+      "paragraphOne": "まだデータがありません。クリックして",
+      "paragraphTwo": "もっと見る",
+      "paragraphThree": "ボタンを押して詳細を表示します。"
+    },
+    "PlaceholderContent": {
+      "content": "後で再確認してください..."
+    }
+  },
+  "Footer": {
+    "copyright": "© 2024 geodevcodes (Rasheed Olatunde).",
+    "rightReserved": "全著作権所有。",
+    "FooterLinks": {
+      "terms": {
+        "name": "利用規約",
+        "href": "#",
+        "key": "terms"
+      },
+      "privacy": {
+        "name": "プライバシーポリシー",
+        "href": "#",
+        "key": "privacy"
+      },
+      "contact": {
+        "name": "連絡先",
+        "href": "#",
+        "key": "contact"
+      },
+      "about": {
+        "name": "概要",
+        "href": "#",
+        "key": "about"
+      }
+    }
+  }
+}
