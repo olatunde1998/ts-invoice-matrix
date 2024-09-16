@@ -16,15 +16,20 @@ export const metadata: Metadata = {
   description: "Total Secure Dashboard",
 };
 
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
+}
+
 export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+  params: { locale },
+}: Readonly<RootLayoutProps>) {
   const messages = await getMessages();
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <TanStackProvider>
